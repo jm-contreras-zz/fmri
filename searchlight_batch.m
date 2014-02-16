@@ -9,7 +9,7 @@ function searchlight_batch(statmap, analysis, mask, whichsrchlght, whichsubs)
 % signal in the local spherical neighborhood differentiates between
 % conditions of interest.
 %
-% SEARCHLIGHTBATCH assumes a home directory that contains a "searchlight"
+% SEARCHLIGHT_BATCH assumes a home directory that contains a "searchlight"
 % directory, which contains a "results" directory and a "masks" directory.
 % In turn, "results" is assumed to contain one directory for each set of
 % general linear model (GLM) maps that is analyzed. STATMAP declares the
@@ -31,7 +31,7 @@ function searchlight_batch(statmap, analysis, mask, whichsrchlght, whichsubs)
 % (WHICHSEARCHLIGHT = 'roi'). This analysis correlates the voxels within an
 % ROI instead of creating spherical searchlights at each voxel.
 %
-% SEARCHLIGHTBATCH is a "wrapper" script that can analyze multiple subjects
+% SEARCHLIGHT_BATCH is a "wrapper" script that can analyze multiple subjects
 % sequentially (those declared by WHICHSUBS, a vector that specifies which
 % subjects will be analyzed) should be edited from analysis to analysis. In
 % turn, it calls, SEARCHLIGHT.m, SEARCHLIGHTRFX.m, or SEARCHLIGHTROI.m.
