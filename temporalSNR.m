@@ -1,3 +1,5 @@
+function [tnsr tp e] = temporalSNR(which, tp, e, p, tsnr)
+
 % [TSNR TP E] = TEMPORALSNR(WHICH, TP, E, P, TSNR) computes temporal signal-
 % to-noise ratio (TSNR), number of experimental timepoints (TP), or effect
 % size (E; percentage of baseline activity by which experimental activity
@@ -26,25 +28,23 @@
 % Written by Juan Manuel Contreras (juan.manuel.contreras.87@gmail.com) on
 % November 24, 2011.
 
-function [tnsr tp e] = temporalSNR(which, tp, e, p, tsnr)
+% Declare the old standard coefficient
+gold = 1.5 * (1 + exp(1) ^ log10(p / 2));
 
-    % Declare the old standard coefficient
-    gold = 1.5 * (1 + exp(1) ^ log10(p / 2));
+% Temporal signal-to-noise ratio
+if strcmp(which, 'tsnr')       
+    tnsr = gold * sqrt(8 / tp) * (1 / e) * erfcinv(p);
+
+% Experimental timepoints
+elseif strcmp(which, 'tp')    
+    tp = 8 * (gold * (erfcinv(p) / (tsnr * e))) ^ 2;
+
+% Effect size
+elseif strcmp(which, 'e')
+    e = (gold * erfcinv(p)) / (tsnr * sqrt(tp / 8));
+
+% Don't know what to do
+else    
+    error('The value in WHICH specifies an unknown command.')
     
-    % Temporal signal-to-noise ratio
-    if strcmp(which, 'tsnr')       
-        tnsr = gold * sqrt(8 / tp) * (1 / e) * erfcinv(p);
-    
-    % Experimental timepoints
-    elseif strcmp(which, 'tp')    
-        tp = 8 * (gold * (erfcinv(p) / (tsnr * e))) ^ 2;
-    
-    % Effect size
-    elseif strcmp(which, 'e')
-        e = (gold * erfcinv(p)) / (tsnr * sqrt(tp / 8));
-    
-    % Don't know what to do
-    else    
-        error('The value in WHICH specifies an unknown command.')
-        
-    end
+end
