@@ -7,7 +7,7 @@ switch whichsearchlight
         for iSub = whichsubs(1):whichsubs(end)
             d.iSub = iSub;
             d.subName = d.subs(iSub).name;
-            searchlight(d)
+            searchlightONE(d)
         end
         
     % Random-effects analysis of individual searchlights
