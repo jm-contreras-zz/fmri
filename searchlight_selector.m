@@ -1,4 +1,4 @@
-function searchlight_selector(whichsearchlight, whichsubs, d)
+function searchlightSEL(whichsearchlight, whichsubs, d)
 
 switch whichsearchlight
     
@@ -16,8 +16,8 @@ switch whichsearchlight
     
     % Subject-level searchlights followed by a random-effects analysis
     case 'subject_rfx'   
-        searchlight_selector('subject', whichsubs, d)
-        searchlight_selector('rfx', whichsubs, d)
+        searchlightSEL('subject', whichsubs, d)
+        searchlightSEL('rfx', whichsubs, d)
     
     % Region-of-interest analysis
     case 'roi'     
