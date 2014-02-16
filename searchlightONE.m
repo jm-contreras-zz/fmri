@@ -1,4 +1,4 @@
-function searchlight(d)
+function searchlightONE(d)
 
 %%%%%%%%%%%%%%%%
 % DECLARATIONS %
