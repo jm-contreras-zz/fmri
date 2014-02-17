@@ -31,7 +31,7 @@ function searchlight(statmap, analysis, mask, whichsrchlght, whichsubs)
 % (WHICHSEARCHLIGHT = 'roi'). This analysis correlates the voxels within an
 % ROI instead of creating spherical searchlights at each voxel.
 %
-% SEARCHLIGHT is a "wrapper" script that can analyze multiple subjects
+% SEARCHLIGHT is a wrapper script that can analyze multiple subjects
 % sequentially (those declared by WHICHSUBS, a vector that specifies which
 % subjects will be analyzed) should be edited from analysis to analysis. In
 % turn, it calls, SEARCHLIGHTONE.m, SEARCHLIGHTRFX.m, or SEARCHLIGHTROI.m.
