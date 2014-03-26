@@ -10,4 +10,4 @@ fmri
 
 - **r2z.m** applies a [Fisher transformation](http://en.wikipedia.org/wiki/Fisher_transformation) to transform correlation coefficients to z-statistics.
 
-- **temporalSNR.m** computes temporal signal-to-noise ratio, number of experimental timepoints, or effect size in an fMRI experiment given two of these variables and a p-value ([Murphy, Bodzurka, & Bandettini, 2007](http://www.ncbi.nlm.nih.gov/pubmed/17126038)).
+- **temporalSNR.m** computes temporal signal-to-noise ratio, number of experimental timepoints, or effect size in an fMRI experiment given two of these variables and a *p*-value ([Murphy, Bodzurka, & Bandettini, 2007](http://www.ncbi.nlm.nih.gov/pubmed/17126038)).
