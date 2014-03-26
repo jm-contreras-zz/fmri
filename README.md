@@ -8,6 +8,6 @@ fmri
   - **searchlightRFX.m** uses searchlight results produced by **searchlightONE.m** to perform a group-level analysis
   - **searchlightROI.m** executes an ROI analysis given a brain mask denoting one or more ROIs
 
-- **r2z.m** applies a [Fisher transformation](http://en.wikipedia.org/wiki/Fisher_transformation) to transform correlation coefficients to z-statistics.
+- **r2z.m** applies a [Fisher transformation](http://en.wikipedia.org/wiki/Fisher_transformation) to transform correlation coefficients to *z*-statistics.
 
 - **temporalSNR.m** computes temporal signal-to-noise ratio, number of experimental timepoints, or effect size in an fMRI experiment given two of these variables and a *p*-value ([Murphy, Bodzurka, & Bandettini, 2007](http://www.ncbi.nlm.nih.gov/pubmed/17126038)).
