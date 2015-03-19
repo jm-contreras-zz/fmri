@@ -37,6 +37,6 @@ for iROI = 1:nROI
     r = fisher(corr(iROIpats, 'type', d.rType));
     within = mean(r(logical(d.within)));
     between = mean(r(logical(d.between)));
-    results(d.iSub,iROI) = within - between;
+    results(d.iSub, iROI) = within - between;
     
 end
